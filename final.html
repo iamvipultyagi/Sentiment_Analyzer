@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sentiment Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      margin: 0;
+      padding: 10px 0;
+      color: #333;
+    }
+
+    #result {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    #submit {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 30px;
+      cursor: pointer;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    #submit:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 style="padding-bottom: 25px;"><font color='cyan'>Seniment Analyser</font> <font color='grey'>for Product-based Review</font></h1>
+    <div class="container">
+        <textarea id="commentInput" placeholder="Enter your comment"></textarea>
+	</div>
+    <button id="submit">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    var submitButton = document.getElementById("submit");
+    var resultDiv = document.getElementById("result");
+    var positiveResult = true;
+
+    submitButton.addEventListener("click", function() {
+      if (positiveResult) {
+        resultDiv.textContent = "Positive Result :)";
+      } else {
+        resultDiv.textContent = "Negative Result  :(";
+      }
+
+      positiveResult = !positiveResult;
+    });
+  </script>
+
+
+  <section class="footer">
+    <p class="footer-text">MINOR PROJECT___Prof. GARIMA PANDEY</p>
+  </section>
+</body>
+</html>
